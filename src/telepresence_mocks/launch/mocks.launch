@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find telepresence_mocks)/launch/rosbridge.launch" /> 
+    <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+        <arg name="localization" value="true" />
+        <arg name="database_path" value="$(find telepresence_mocks)/map/IBV_Lab.db"/>
+    </include>
+    <node name="tf2_web_republisher" pkg="tf2_web_republisher" type="tf2_web_republisher" />
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+    <arg name="ssl" default="true" />
+    <arg name="certfile" default="/home/binary/virtualbox/cert.pem"/>
+    <arg name="keyfile" default="/home/binary/virtualbox/key.pem"/>
+  </include>
+</launch>
