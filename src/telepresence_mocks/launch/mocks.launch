@@ -5,4 +5,6 @@
         <arg name="database_path" value="$(find telepresence_mocks)/map/IBV_Lab.db"/>
     </include>
     <node name="tf2_web_republisher" pkg="tf2_web_republisher" type="tf2_web_republisher" />
+    <node name="battery12V" pkg="telepresence_mocks" type="battery.py" ns="24V" respawn="true" />
+    <node name="battery24V" pkg="telepresence_mocks" type="battery.py" ns="12V" respawn="true" />
 </launch>
